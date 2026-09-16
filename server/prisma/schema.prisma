@@ -20,6 +20,12 @@ model Patient {
   labOrders   LabOrder[]
 }
 
+model OrderStatus {
+  code      String     @id
+  label     String
+  labOrders LabOrder[]
+}
+
 model LabTest {
   id          Int          @id @default(autoincrement())
   code        String       @unique
@@ -33,14 +39,19 @@ model LabTest {
 }
 
 model LabOrder {
-  id          Int        @id @default(autoincrement())
+  id          Int         @id @default(autoincrement())
   patientId   Int
   labTestId   Int
-  status      String     @default("PENDING")
-  requestedAt DateTime   @default(now())
-  patient     Patient    @relation(fields: [patientId], references: [id], onDelete: Restrict)
-  labTest     LabTest    @relation(fields: [labTestId], references: [id], onDelete: Restrict)
+  statusCode  String      @default("PENDING")
+  requestedAt DateTime    @default(now())
+  patient     Patient     @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  labTest     LabTest     @relation(fields: [labTestId], references: [id], onDelete: Restrict)
+  status      OrderStatus @relation(fields: [statusCode], references: [code], onDelete: Restrict)
   result      LabResult?
+
+  @@index([patientId])
+  @@index([labTestId])
+  @@index([statusCode])
 }
 
 model LabResult {

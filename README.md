@@ -51,7 +51,6 @@ Relaciones principales:
 - `PATCH /api/results/:id`
 - `GET /api/health` (ya disponible para comprobar el servidor)
 
-El CRUD de negocio y sus pantallas se implementara en el siguiente paso. Esta entrega solo deja lista la estructura y configuracion inicial.
 
 ## Estructura
 
