@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Patient {
+  id          Int        @id @default(autoincrement())
+  documentId  String     @unique
+  firstName   String
+  lastName    String
+  birthDate   DateTime
+  email       String?
+  phone       String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  labOrders   LabOrder[]
+}
+
+model LabTest {
+  id          Int          @id @default(autoincrement())
+  code        String       @unique
+  name        String
+  description String?
+  price       Decimal      @default(0)
+  isActive    Boolean      @default(true)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  labOrders   LabOrder[]
+}
+
+model LabOrder {
+  id          Int        @id @default(autoincrement())
+  patientId   Int
+  labTestId   Int
+  status      String     @default("PENDING")
+  requestedAt DateTime   @default(now())
+  patient     Patient    @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  labTest     LabTest    @relation(fields: [labTestId], references: [id], onDelete: Restrict)
+  result      LabResult?
+}
+
+model LabResult {
+  id          Int      @id @default(autoincrement())
+  labOrderId  Int      @unique
+  value       String
+  unit        String?
+  referenceRange String?
+  notes       String?
+  reportedAt  DateTime @default(now())
+  labOrder    LabOrder @relation(fields: [labOrderId], references: [id], onDelete: Cascade)
+}
