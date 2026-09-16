@@ -41,14 +41,28 @@ Relaciones principales:
 
 ### Endpoints previstos
 
-- `GET|POST /api/patients`
-- `GET|PATCH|DELETE /api/patients/:id`
-- `GET|POST /api/tests`
-- `GET|PATCH|DELETE /api/tests/:id`
-- `GET|POST /api/orders`
-- `GET|PATCH|DELETE /api/orders/:id`
-- `GET|POST /api/orders/:id/result`
-- `PATCH /api/results/:id`
+- `GET /api/patients` - listar pacientes.
+- `GET /api/patients/:id` - consultar un paciente.
+- `POST /api/patients` - crear un paciente.
+- `PATCH /api/patients/:id` - actualizar un paciente.
+- `DELETE /api/patients/:id` - eliminar un paciente.
+- `GET /api/tests` - listar pruebas.
+- `GET /api/tests/:id` - consultar una prueba.
+- `POST /api/tests` - crear una prueba.
+- `PATCH /api/tests/:id` - actualizar una prueba.
+- `DELETE /api/tests/:id` - eliminar una prueba.
+- `GET /api/orders` - listar ordenes.
+- `GET /api/orders/:id` - consultar una orden.
+- `POST /api/orders` - crear una orden.
+- `PATCH /api/orders/:id` - actualizar una orden.
+- `DELETE /api/orders/:id` - eliminar una orden.
+- `GET /api/orders/:id/result` - consultar el resultado de una orden.
+- `POST /api/orders/:id/result` - crear el resultado de una orden.
+- `GET /api/results` - listar resultados.
+- `GET /api/results/:id` - consultar un resultado.
+- `POST /api/results` - crear un resultado.
+- `PATCH /api/results/:id` - actualizar un resultado.
+- `DELETE /api/results/:id` - eliminar un resultado.
 - `GET /api/health` (ya disponible para comprobar el servidor)
 
 
