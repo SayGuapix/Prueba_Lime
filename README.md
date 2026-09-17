@@ -5,6 +5,10 @@ Dado que la prueba no me llego al correo, quiza por algun error tecnico, decidi 
 
 Aplicacion web para gestionar un laboratorio clinico. El proyecto esta preparado como un monorepo pequeno con React, Express, SQLite y Prisma.
 
+<img width="2501" height="1247" alt="image" src="https://github.com/user-attachments/assets/ff501bb4-d754-49bd-bf7d-2ab1635c60a1" />
+![Uploading image.png…]()
+
+
 ## Alcance funcional
 
 ### Entidades y relaciones
