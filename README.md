@@ -1,4 +1,4 @@
-Dado que la prueba no me llego al correo, quiza por algun error tecnico, decidi inventarme un poco la prueba, en la entrevista presencial me mencionaron que especificamente seria un CRUD con cualquier tecnologia, el tema del CRUD no me llego, asi que inventandolo un poco y por no quedarme sin hacer nada, hare un CRUD de laboratorio clinico por creer que podria haner sido el caso. los agentes de IA que usare seran de Cline y Codex.
+Dado que la prueba no me llego al correo, quiza por algun error tecnico, decidi inventarme un poco la prueba, en la entrevista presencial me mencionaron que especificamente seria un CRUD con cualquier tecnologia, el tema del CRUD no me llego, asi que inventandolo un poco y por no quedarme sin hacer nada, hice un CRUD de laboratorio clinico por creer que podria haber sido el caso. los agentes de IA que usare seran de Cline y Codex.
 
 
 # Clinical Lab CRUD
